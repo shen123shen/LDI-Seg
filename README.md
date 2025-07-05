@@ -41,12 +41,11 @@ Evaluation
 python Test.py
  ```
 # Citation
-If you find our repo useful for your research, please consider citing our article.
-This article has been submitted for peer-review in the journal called The visual computer.
+
  ```
 @ARTICLE{40030292,
   author  = {Haozhou Shen, Shiren Li, Kamoliddin Shukurov, Longquan Shao, Maksim Davydov, Jawad Hussain, Guangguang Yang},
-  journal = {The Viusal Computer}
+  journal = {The Visual Computer}
   title   = {A Feature Fusion Guidance for Medical Image Segmentation},
   year    = {2025}
 }
