@@ -45,8 +45,8 @@ python Test.py
  ```
 @ARTICLE{40030292,
   author  = {Haozhou Shen, Shiren Li, Guangguang Yang},
-  journal = {The Vision Computer}
-  title   = {Feature Fusion-Enhanced Medical Image Segmentation: A Novel Approach},
-  year    = {2025}
+  journal = {Expert Systems}
+  title   = {Enhancing Medical Image Segmentation with Feature Fusion Guidance},
+  year    = {2026}
 }
  ```
