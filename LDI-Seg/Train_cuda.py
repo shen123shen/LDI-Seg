@@ -8,7 +8,7 @@ import argparse
 from datetime import datetime
 from torch.optim.lr_scheduler import CosineAnnealingWarmRestarts
 
-from lib.MDI_Net import MDI_Net
+from lib.LDI_Seg import LDI_Seg
 from utils.dataloader import get_loader
 from utils.utils import clip_gradient, AvgMeter
 import torch.nn.functional as F
@@ -189,10 +189,10 @@ if __name__ == '__main__':
     parser.add_argument('--clip', type=float, default=0.5, help='gradient clip')
     parser.add_argument('--train_path', type=str, default='/home/ta/datasets/Kvasir-SEG/Train_Folder')
     parser.add_argument('--test_path', type=str, default='/home/ta/datasets/Kvasir-SEG/Val_Folder')
-    parser.add_argument('--train_save', type=str, default='/home/ta/Project/SwinPA-Sparse/result/Kvasir/MDI_Net/')
+    parser.add_argument('--train_save', type=str, default='/home/ta/Project/SwinPA-Sparse/result/Kvasir/LDI_Seg/')
     opt = parser.parse_args()
 
-    logging.basicConfig(filename='/home/ta/Project/SwinPA-Sparse/log/Kvasir/MDI_Net.log',
+    logging.basicConfig(filename='/home/ta/Project/SwinPA-Sparse/log/Kvasir/LDI_Seg.log',
                         format='[%(asctime)s-%(filename)s-%(levelname)s:%(message)s]',
                         level=logging.INFO, filemode='a', datefmt='%Y-%m-%d %I:%M:%S %p')
     logging.info('opt:{}'.format(opt))
@@ -200,7 +200,7 @@ if __name__ == '__main__':
     torch.cuda.set_device(opt.gpu_id)
     FIXED_SEED = 42
 
-    model = MDI_Net().cuda()
+    model = LDI_Seg().cuda()
     params = model.parameters()
     if opt.optimizer == 'AdamW':
         optimizer = torch.optim.AdamW(params, opt.lr, weight_decay=1e-4)
